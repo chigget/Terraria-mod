@@ -1,4 +1,4 @@
-# MythosOfOlympus
+# Terraria-mod — MythosOfOlympus
 
 以古希腊神话为主题的 Terraria 内容 Mod，当前为第一个小版本的开发原型。
 
