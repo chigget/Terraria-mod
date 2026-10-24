@@ -1,0 +1,82 @@
+NPCs: {
+	Minotaur: {
+		DisplayName: Minotaur
+		Awoken: Minotaur has awoken!
+	}
+}
+
+Configs: {
+	MinotaurTestConfig: {
+		DisplayName: Temporary Minotaur Testing
+
+		SkipKingSlimeRequirement: {
+			Label: Skip labyrinth unlock (test summon only)
+			Tooltip: Allows the test-summoned Minotaur to fight before unlocking the labyrinth. Does not open the gate or change world progress.
+		}
+	}
+}
+
+Projectiles: {
+	MinotaurShockwave.DisplayName: Minotaur Shockwave
+	WaraxeShockwave.DisplayName: Waraxe Shockwave
+}
+
+Items: {
+	MinotaurWaraxe: {
+		DisplayName: Minotaur Waraxe
+		Tooltip:
+			'''
+			Each swing has a 25% chance to release a shockwave toward the cursor
+			Deals 70% weapon damage with stronger knockback and hits up to two enemies
+			Flies through the air and dissipates on solid blocks; cannot chop trees
+			'''
+	}
+
+	LabyrinthKey: {
+		DisplayName: Labyrinth Key
+		Tooltip:
+			'''
+			Right-click the golden labyrinth gate with this key in your inventory
+			Consumes one key to permanently open the labyrinth in this world
+			'''
+	}
+
+	MinotaurTestSummon: {
+		DisplayName: Minotaur Test Summon
+		Tooltip:
+			'''
+			Places a waiting Minotaur nearby
+			Unlock the labyrinth, then approach within 8 tiles to start the fight
+			Reusable; use on wide, flat ground
+			'''
+	}
+}
+
+Summoning: {
+	AlreadyActive: A Minotaur is already present. Return to its original location; leaving combat resets it there.
+	NoSpace: No clear ground nearby. Move to a wider, flatter area and try again.
+	SpawnFailed: No NPC slot is available. Try again after nearby enemies have disappeared.
+	Summoned: The Minotaur waits nearby. Approach within 8 tiles with a clear line of sight to start the fight!
+	Locked: The Minotaur waits nearby. Open the labyrinth with a key, or enable the temporary test bypass.
+}
+
+Tiles: {
+	LabyrinthBrick.MapEntry: Labyrinth Marble
+	LabyrinthGate.MapEntry: Locked Labyrinth Gate
+	LabyrinthArenaSeal.MapEntry: Arena Seal
+}
+
+Labyrinth: {
+	NeedKey: A Labyrinth Key is required. King Slime drops one when defeated.
+	Opened: The labyrinth is now permanently open in this world!
+	CommandDescription: locate shows the entrance; generate adds a labyrinth; tp visits the gate; key grants a test key.
+	SinglePlayerOnly: The generate, tp and key test commands are only available in single player.
+	TestKeyGranted: A test Labyrinth Key has been spawned. Pick it up and right-click the golden gate to unlock it.
+	EntranceBlocked: The entrance landing point is blocked. Clear it before teleporting.
+	NoSafeLocation: No safe location found. No terrain was changed. Try again or create a new world.
+	NotGenerated: This world has no labyrinth. In a single-player test world, use /labyrinth generate to add one.
+	Location: Entrance tile: X={0}, Y={1}. Offset from world spawn: horizontal {2}, downward {3} tiles (negative horizontal means left).
+	Locked: Status: locked. Bring a Labyrinth Key and right-click the golden gate on the left side.
+	Open: Status: open. Follow the passages to the central arena.
+	Defeated: Status: open; the labyrinth guardian has been defeated.
+}

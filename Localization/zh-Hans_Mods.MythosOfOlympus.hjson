@@ -1,0 +1,82 @@
+NPCs: {
+	Minotaur: {
+		DisplayName: 米诺陶洛斯
+		Awoken: 米诺陶洛斯已苏醒！
+	}
+}
+
+Configs: {
+	MinotaurTestConfig: {
+		DisplayName: 米诺陶洛斯临时测试设置
+
+		SkipKingSlimeRequirement: {
+			Label: 跳过迷宫解锁（仅测试召唤）
+			Tooltip: 开启后，测试召唤的米诺陶洛斯可在迷宫解锁前开战。不会打开迷宫门，也不会修改世界进度。
+		}
+	}
+}
+
+Projectiles: {
+	MinotaurShockwave.DisplayName: 米诺陶洛斯冲击波
+	WaraxeShockwave.DisplayName: 战斧冲击波
+}
+
+Items: {
+	MinotaurWaraxe: {
+		DisplayName: 米诺陶洛斯战斧
+		Tooltip:
+			'''
+			每次挥动有 25% 几率朝鼠标方向释放一道冲击波
+			冲击波造成 70% 武器伤害和更强的击退，最多击中两个敌人
+			冲击波可飞向空中，碰到实心方块消散；无法砍树
+			'''
+	}
+
+	LabyrinthKey: {
+		DisplayName: 迷宫钥匙
+		Tooltip:
+			'''
+			放在背包中，右键点击迷宫的金色大门
+			消耗一把钥匙，永久开启当前世界的迷宫
+			'''
+	}
+
+	MinotaurTestSummon: {
+		DisplayName: 米诺陶洛斯测试召唤物
+		Tooltip:
+			'''
+			在附近放置等待中的米诺陶洛斯
+			解锁迷宫后，靠近至 8 格内触发战斗
+			可重复使用；请在宽阔平地上测试
+			'''
+	}
+}
+
+Summoning: {
+	AlreadyActive: 已有米诺陶洛斯，请返回它最初的位置；脱战后它会在那里重置并等待。
+	NoSpace: 附近没有足够的落脚空间，请移到更宽阔的平地后重试。
+	SpawnFailed: 当前没有可用的 NPC 栏位，请等待附近敌怪消失后重试。
+	Summoned: 米诺陶洛斯正在附近等待，靠近至 8 格内且视线无遮挡即可触发战斗！
+	Locked: 米诺陶洛斯正在附近等待，请先用钥匙打开迷宫，或开启临时测试开关。
+}
+
+Tiles: {
+	LabyrinthBrick.MapEntry: 迷宫大理石
+	LabyrinthGate.MapEntry: 锁住的迷宫大门
+	LabyrinthArenaSeal.MapEntry: 战斗封印
+}
+
+Labyrinth: {
+	NeedKey: 需要一把迷宫钥匙，击败史莱姆王即可获得。
+	Opened: 当前世界的迷宫已永久开放！
+	CommandDescription: locate 定位入口；generate 补生成迷宫；tp 传送到门外；key 领取测试钥匙。
+	SinglePlayerOnly: generate、tp 和 key 测试命令仅限单人模式使用。
+	TestKeyGranted: 已生成一把测试用迷宫钥匙，拾取后放在背包中，右键金色大门即可开门。
+	EntranceBlocked: 入口落脚点被方块挡住，请清理后再传送。
+	NoSafeLocation: 未找到合适位置，没有改动地形。可以重试或新建世界。
+	NotGenerated: 当前世界还没有迷宫。单人测试世界可输入 /labyrinth generate 补生成。
+	Location: 入口方块坐标：X={0}，Y={1}。相对世界出生点：水平 {2} 格，向下 {3} 格（水平负数为左侧）。
+	Locked: 状态：未解锁。携带迷宫钥匙，右键点击迷宫左侧的金色大门。
+	Open: 状态：已开放。沿通道探索，进入中央战斗大厅。
+	Defeated: 状态：已开放，迷宫守卫已被击败。
+}
